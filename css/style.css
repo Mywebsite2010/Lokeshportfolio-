@@ -1290,3 +1290,100 @@ nav a:hover {
     }
 
 }
+/* LOADING SCREEN */
+
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #070b18;
+
+    animation: loaderOut 0.8s ease 2.2s forwards;
+}
+
+.loader-logo {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    animation: logoIn 1s ease forwards;
+}
+
+.loader-logo span {
+    color: #8b5cf6;
+}
+
+.loader-line {
+    width: 0;
+    height: 3px;
+    margin-top: 18px;
+
+    border-radius: 10px;
+    background: linear-gradient(90deg, #8b5cf6, #2563eb);
+
+    animation: lineLoad 1.5s ease forwards;
+}
+
+.loader p {
+    margin-top: 15px;
+
+    color: #8f96b2;
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    opacity: 0;
+    animation: textIn 0.8s ease 0.7s forwards;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes logoIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes lineLoad {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 180px;
+        opacity: 1;
+    }
+}
+
+@keyframes textIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loaderOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
