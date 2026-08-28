@@ -1724,3 +1724,91 @@ nav a:hover {
 .project-card:hover .project-tech span {
     transform: translateY(-2px);
 }
+/* PROFESSIONAL FOOTER */
+
+.site-footer {
+    margin-top: 80px;
+    padding: 45px 8% 20px;
+
+    border-top: 1px solid rgba(139, 92, 246, 0.18);
+
+    background: rgba(5, 8, 20, 0.65);
+    backdrop-filter: blur(15px);
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.footer-brand h2 span {
+    color: #8b5cf6;
+}
+
+.footer-brand p {
+    color: #8f96b2;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: #aeb4ce;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #a78bfa;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-bottom p {
+    color: #707792;
+    font-size: 11px;
+}
+
+/* MOBILE FOOTER */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 12px 16px;
+    }
+}
