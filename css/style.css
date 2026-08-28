@@ -1900,3 +1900,94 @@ nav a:hover {
 .resume-button::before {
     z-index: -1;
 }
+/* CURRENT FOCUS SECTION */
+
+.focus-section {
+    max-width: 1100px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+}
+
+.focus-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+.focus-intro h2 {
+    font-size: 38px;
+    margin: 10px 0 15px;
+}
+
+.focus-intro h2 span {
+    color: #8b5cf6;
+}
+
+.focus-intro > p:last-child {
+    color: #aeb4ce;
+    line-height: 1.6;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.focus-card {
+    padding: 24px;
+    min-height: 190px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(139, 92, 246, 0.18);
+
+    transition: 0.3s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(139, 92, 246, 0.55);
+    box-shadow: 0 18px 40px rgba(139, 92, 246, 0.14);
+}
+
+.focus-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.focus-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.focus-card p {
+    color: #aeb4ce;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .focus-section {
+        padding: 0 20px;
+    }
+
+    .focus-intro h2 {
+        font-size: 32px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+}
