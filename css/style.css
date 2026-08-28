@@ -1861,3 +1861,42 @@ nav a:hover {
 .contact-card:hover .contact-link {
     transform: translateX(4px);
 }
+/* RESUME BUTTON PREMIUM EFFECT */
+
+.resume-button {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.15);
+    transform: skewX(-25deg);
+
+    transition: left 0.5s ease;
+}
+
+.resume-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.3);
+}
+
+.resume-button:hover::before {
+    left: 130%;
+}
+
+.resume-button {
+    z-index: 1;
+}
+
+.resume-button::before {
+    z-index: -1;
+}
