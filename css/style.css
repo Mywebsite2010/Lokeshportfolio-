@@ -1649,3 +1649,78 @@ nav a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+/* PREMIUM PROJECT CARD EFFECT */
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Moving glow */
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    right: -90px;
+
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.16);
+
+    filter: blur(35px);
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* Card content stays above glow */
+
+.project-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Smooth hover */
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Project number */
+
+.project-number {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-number {
+    transform: translateX(5px);
+}
+
+/* Project status */
+
+.project-status {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-status {
+    transform: scale(1.05);
+}
+
+/* Technology badges */
+
+.project-tech span {
+    transition: transform 0.25s ease;
+}
+
+.project-card:hover .project-tech span {
+    transform: translateY(-2px);
+}
