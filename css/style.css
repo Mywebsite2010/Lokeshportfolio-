@@ -1570,3 +1570,20 @@ nav a:hover {
         transform: translateY(0);
     }
 }
+/* FLOATING PROFILE CARD */
+
+.hero-card {
+    animation:
+        heroCardReveal 1s ease 2.9s forwards,
+        profileFloat 4s ease-in-out 4s infinite;
+}
+
+@keyframes profileFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
